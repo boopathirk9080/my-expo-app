@@ -4,7 +4,11 @@ module.exports = {
   singleQuote: true,
   bracketSameLine: true,
   trailingComma: 'es5',
-
-  plugins: [require.resolve('prettier-plugin-tailwindcss')],
+  content: ["./App.tsx", "./components/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
   tailwindAttributes: ['className'],
 };

@@ -1,14 +1,13 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
-import './global.css';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-
+import { Text, View, TextInput, Button } from "react-native";
+import "./global.css"
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </SafeAreaProvider>
+    <View className="flex-1 items-center justify-center bg-white">
+      <View className="flex-row justify-between w-full px-4">
+        <TextInput placeholder="Type your Goal" className="border p-2 flex-1 mr-2" />
+        <Button title="Add Goal" />
+      </View>
+      <Text className="mt-4">List of Goals</Text>
+    </View>
   );
 }
